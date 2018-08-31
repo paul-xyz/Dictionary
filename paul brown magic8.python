@@ -1,0 +1,21 @@
+import random
+import sys
+
+responses = ['Yes','You wish','Not happening','Nope','Next question','Without a doubt','Surely']
+
+print('Welcome to the magic 8 ball')
+
+name = input('What is your name? : ')
+playGame = input('%s, Do you want to play?(Yes/No)' % (name))
+if playGame == 'yes':
+    print("%s, let's play the Magic 8 Ball" % (name))
+else:
+    print('Exiting the game...')
+    sys.exit()
+print('Enter exit at any time below if you wish to exit the game')
+while True:
+    question = input('What is your question? ')
+    if question == 'exit':
+        sys.exit()
+    print (random.choice(responses))
+
